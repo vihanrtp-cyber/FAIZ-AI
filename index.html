@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FAIZ AI</title>
+<style>
+body{
+background:black;
+color:white;
+font-family:sans-serif;
+text-align:center;
+padding:20px;
+}
+input{
+padding:10px;
+width:70%;
+}
+button{
+padding:10px;
+}
+#chat{
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<h1>FAIZ AI 🤖</h1>
+
+<input id="text" placeholder="Ask something">
+<button onclick="reply()">Send</button>
+
+<div id="chat"></div>
+
+<script>
+function reply(){
+
+let msg=document.getElementById("text").value;
+
+let answer="I am FAIZ AI 🤖";
+
+if(msg.includes("hello")){
+answer="Hello bro 🔥";
+}
+
+if(msg.includes("minecraft")){
+answer="Minecraft is best game ⛏️";
+}
+
+document.getElementById("chat").innerHTML +=
+"<p><b>You:</b> "+msg+"</p>";
+
+document.getElementById("chat").innerHTML +=
+"<p><b>AI:</b> "+answer+"</p>";
+
+}
+</script>
+
+</body>
+</html>
